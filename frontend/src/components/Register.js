@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
-export function SignUp({ onSignInClick }) {
+export function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSignUp = () => {};
 
@@ -11,10 +13,20 @@ export function SignUp({ onSignInClick }) {
       <div className={`form-container sign-in`}>
         <div className="form">
           <h1>Create Account</h1>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <input type="password" placeholder="Confirm Password" />
-          <button onClick={handleSignUp}>Sign Up</button>
+          <button onClick={handleSignUp}>Register</button>
         </div>
       </div>
       <div className="toggle-container">
@@ -22,7 +34,7 @@ export function SignUp({ onSignInClick }) {
           <div className="toggle-panel toggle-right">
             <h1>Already a user?</h1>
             <p>
-              <button onClick={onSignInClick}>Login</button>
+              <button onClick={() => navigate("/Login")}>Login</button>
             </p>
           </div>
         </div>
