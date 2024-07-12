@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./login.css";
 import { Navigate, useNavigate } from "react-router-dom";
 
 export function SignUp() {
@@ -34,7 +35,7 @@ export function SignUp() {
           <div className="toggle-panel toggle-right">
             <h1>Already a user?</h1>
             <p>
-              <button onClick={() => navigate("/Login")}>Login</button>
+              <button onClick={() => navigate("/login")}>Login</button>
             </p>
           </div>
         </div>
