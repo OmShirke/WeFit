@@ -5,7 +5,8 @@ import { SignUp } from "./pages/Login/Register";
 import { Login } from "./pages/Login/Login";
 import { Home } from "./components/Home";
 import { Diet } from "./pages/diet/Diet";
-import { Exercise } from "./pages/exercise/exercise";
+import { Exercise } from "./pages/exercise/Exercise";
+import { Community } from "./pages/community/Community.js";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/diet" element={<Diet />} />
         <Route path="/exercise" element={<Exercise />} />
+        <Route path="/community" element={<Community />} />
         {/* Add other routes as necessary */}
       </Routes>
     </div>

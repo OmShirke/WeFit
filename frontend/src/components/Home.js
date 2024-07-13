@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
 import "./home.css";
 
 export const Home = () => {
@@ -14,6 +15,7 @@ export const Home = () => {
           <p>Explore fitness activities and track your progress!</p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
